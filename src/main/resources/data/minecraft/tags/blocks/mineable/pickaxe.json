@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "radioflyermod:titanium_ore",
+    "radioflyermod:titanium_block",
+    "radioflyermod:deepslate_titanium_ore",
+    "radioflyermod:netherack_titanium_ore",
+    "radioflyermod:endstone_titanium_ore",
+    "radioflyermod:repulsion_block",
+    "radioflyermod:led_lamp",
+    "radioflyermod:distillery"
+  ]
+}

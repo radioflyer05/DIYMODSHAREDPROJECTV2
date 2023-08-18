@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "  W",
+    " S ",
+    "   "
+
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:mortar_and_pestle"
+  }
+
+}

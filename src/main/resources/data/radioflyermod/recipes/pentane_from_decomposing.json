@@ -1,0 +1,11 @@
+{
+  "type": "radioflyermod:decomposing",
+  "ingredients": [
+    {
+      "item": "radioflyermod:hexane_bucket"
+    }
+  ],
+  "output": {
+    "item": "radioflyermod:pentane_bucket"
+  }
+}

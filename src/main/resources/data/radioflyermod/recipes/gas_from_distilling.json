@@ -1,0 +1,15 @@
+{
+  "type": "radioflyermod:distilling",
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "fluid": {
+    "FluidName": "radioflyermod:oil_fluid",
+    "Amount": 1500
+  },
+  "output": {
+    "item": "radioflyermod:gas_bucket"
+  }
+}

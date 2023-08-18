@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "TTT",
+    " S ",
+    " S "
+
+  ],
+  "key": {
+      "T": {
+        "item": "radioflyermod:titaniumingot"
+      },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:titanium_pickaxe"
+  }
+
+}

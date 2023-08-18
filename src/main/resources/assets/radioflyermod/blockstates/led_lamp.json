@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model": "radioflyermod:block/led_lamp_on" },
+    "lit=false": { "model": "radioflyermod:block/led_lamp_off" }
+  }
+}

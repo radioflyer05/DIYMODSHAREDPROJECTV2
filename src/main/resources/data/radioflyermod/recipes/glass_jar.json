@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    " W ",
+    "G G",
+    "GGG"
+
+  ],
+  "key": {
+      "G": {
+        "item": "minecraft:glass"
+      },
+    "W": {
+      "item": "minecraft:oak_planks"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:glass_jar",
+    "count": 3
+  }
+
+}

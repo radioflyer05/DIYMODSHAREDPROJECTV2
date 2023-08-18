@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "IGI",
+    "TRT",
+    "DGD"
+
+  ],
+  "key": {
+    "T": {
+      "item": "radioflyermod:fuel_tank"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "R": {
+      "item": "radioflyermod:rocket_pack"
+    },
+    "D": {
+      "item": "radioflyermod:rocket_engine"
+    },
+    "I": {
+      "item": "radioflyermod:titaniumingot"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:upgraded_rocket_pack",
+    "count": 1
+  }
+
+}

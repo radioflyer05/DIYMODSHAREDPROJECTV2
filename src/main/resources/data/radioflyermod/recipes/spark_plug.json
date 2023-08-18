@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    " R ",
+    " Z ",
+    "   "
+
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "Z": {
+      "item": "radioflyermod:titaniumingot"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:spark_plug",
+    "count": 1
+  }
+
+}

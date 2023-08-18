@@ -1,0 +1,16 @@
+{
+  "type": "radioflyermod:distilling",
+  "ingredients": [
+    {
+      "item": "radioflyermod:flour"
+    }
+  ],
+    "fluid": {
+      "FluidName": "minecraft:water",
+      "Amount": 250
+    },
+
+  "output": {
+    "item": "radioflyermod:yeast"
+  }
+}

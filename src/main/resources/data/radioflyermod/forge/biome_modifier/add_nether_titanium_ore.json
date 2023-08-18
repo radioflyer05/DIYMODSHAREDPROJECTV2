@@ -1,0 +1,7 @@
+{
+
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": "radioflyermod:nether_titanium_ore_placed",
+  "step": "underground_ores"
+}

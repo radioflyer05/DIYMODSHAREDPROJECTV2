@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "TIT",
+    "I I",
+    "TIT"
+
+  ],
+  "key": {
+      "T": {
+        "item": "minecraft:iron_ingot"
+      },
+    "I": {
+      "item": "radioflyermod:titaniumingot"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:turbine"
+  }
+
+}

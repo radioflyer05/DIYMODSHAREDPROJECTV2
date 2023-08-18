@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "NGN",
+    "GJG",
+    "NGN"
+
+  ],
+  "key": {
+      "G": {
+        "item": "minecraft:glass"
+      },
+    "J": {
+      "item": "radioflyermod:glass_jar"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:fuel_tank",
+    "count": 1
+  }
+
+}

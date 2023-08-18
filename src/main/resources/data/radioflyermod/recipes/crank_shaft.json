@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "ZIZ",
+    "I I",
+    "I I"
+
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Z": {
+      "item": "radioflyermod:titaniumingot"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:crank_shaft",
+    "count": 1
+  }
+
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "SSS",
+    "STS",
+    "SSS"
+
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stone"
+    },
+    "T": {
+      "item": "radioflyermod:fuel_tank"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:empty_pressurized_container"
+  }
+
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "TRT",
+    "RGR",
+    "TRT"
+
+  ],
+  "key": {
+      "T": {
+        "item": "radioflyermod:titaniumingot"
+      },
+    "G": {
+      "item": "minecraft:glowstone"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:led_lamp"
+  }
+
+}

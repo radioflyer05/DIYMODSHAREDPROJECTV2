@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "SP ",
+    " Y ",
+    "HC "
+
+  ],
+  "key": {
+    "Y": {
+      "item": "radioflyermod:cylinder"
+    },
+    "C": {
+      "item": "radioflyermod:crank_case"
+    },
+    "H": {
+      "item": "radioflyermod:crank_shaft"
+    },
+    "P": {
+      "item": "radioflyermod:piston"
+    },
+    "S": {
+      "item": "radioflyermod:spark_plug"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:small_2_stroke_engine",
+    "count": 1
+  }
+
+}

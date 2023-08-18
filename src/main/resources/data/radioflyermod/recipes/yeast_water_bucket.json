@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "SYS",
+    " B ",
+    "   "
+
+  ],
+  "key": {
+      "B": {
+        "item": "minecraft:bucket"
+      },
+    "Y": {
+      "item": "radioflyermod:yeast"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:yeast_water_bucket",
+    "count": 1
+  }
+
+}

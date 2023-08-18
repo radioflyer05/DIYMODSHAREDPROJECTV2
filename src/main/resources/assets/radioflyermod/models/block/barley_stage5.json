@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "radioflyermod:block/barley_stage5"
+  },
+  "render_type": "cutout"
+}

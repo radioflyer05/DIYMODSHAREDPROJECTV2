@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "radioflyermod:titanium_block"
+    }
+  ],
+  "result": {
+    "item": "radioflyermod:titaniumingot",
+    "count": 9
+  }
+}

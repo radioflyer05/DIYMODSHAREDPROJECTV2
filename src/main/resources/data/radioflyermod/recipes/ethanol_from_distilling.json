@@ -1,0 +1,16 @@
+{
+  "type": "radioflyermod:distilling",
+  "ingredients": [
+    {
+      "item": "radioflyermod:barley_jar"
+    }
+  ],
+    "fluid": {
+      "FluidName": "radioflyermod:yeast_water_fluid",
+      "Amount": 250
+    },
+
+  "output": {
+    "item": "radioflyermod:ethanol"
+  }
+}

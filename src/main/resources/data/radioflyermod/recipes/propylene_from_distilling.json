@@ -1,0 +1,15 @@
+{
+  "type": "radioflyermod:distilling",
+  "ingredients": [
+    {
+      "item": "radioflyermod:propane_pressurized_container"
+    }
+  ],
+  "fluid": {
+    "FluidName": "minecraft:water",
+    "Amount": 500
+  },
+  "output": {
+    "item": "radioflyermod:propylene_pressurized_container"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    " P ",
+    " C ",
+    "   "
+
+  ],
+  "key": {
+      "P": {
+        "item": "radioflyermod:pentane_bucket"
+      },
+    "C": {
+      "item": "radioflyermod:empty_pressurized_container"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:pentane_pressurized_container"
+  }
+
+}

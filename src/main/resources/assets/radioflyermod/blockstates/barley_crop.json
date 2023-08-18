@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "age=0": { "model": "radioflyermod:block/barley_stage0" },
+    "age=1": { "model": "radioflyermod:block/barley_stage1" },
+    "age=2": { "model": "radioflyermod:block/barley_stage2" },
+    "age=3": { "model": "radioflyermod:block/barley_stage3" },
+    "age=4": { "model": "radioflyermod:block/barley_stage4" },
+    "age=5": { "model": "radioflyermod:block/barley_stage5" },
+    "age=6": { "model": "radioflyermod:block/barley_stage6" }
+  }
+}

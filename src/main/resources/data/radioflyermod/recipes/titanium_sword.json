@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    " T ",
+    " T ",
+    " S "
+
+  ],
+  "key": {
+      "T": {
+        "item": "radioflyermod:titaniumingot"
+      },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:titanium_sword"
+  }
+
+}

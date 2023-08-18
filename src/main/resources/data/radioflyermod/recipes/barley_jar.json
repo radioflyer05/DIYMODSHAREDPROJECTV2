@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "BBB",
+    "BJB",
+    "BBB"
+
+  ],
+  "key": {
+      "J": {
+        "item": "radioflyermod:glass_jar"
+      },
+    "B": {
+      "item": "radioflyermod:crushed_barley"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:barley_jar"
+  }
+
+}

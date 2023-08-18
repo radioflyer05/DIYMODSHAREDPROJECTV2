@@ -1,0 +1,11 @@
+{
+  "type": "radioflyermod:decomposing",
+  "ingredients": [
+    {
+      "item": "radioflyermod:propane_pressurized_container"
+    }
+  ],
+  "output": {
+    "item": "radioflyermod:ethane_pressurized_container"
+  }
+}

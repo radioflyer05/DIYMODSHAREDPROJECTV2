@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "IEI",
+    "RTR",
+    "DSD"
+
+  ],
+  "key": {
+    "T": {
+      "item": "radioflyermod:fuel_tank"
+    },
+    "E": {
+      "item": "radioflyermod:ethanol"
+    },
+    "R": {
+      "item": "minecraft:firework_rocket"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "radioflyermod:rocket_engine"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:rocket_pack",
+    "count": 1
+  }
+
+}

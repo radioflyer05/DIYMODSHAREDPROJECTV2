@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "BEB",
+    "TTT",
+    "TIT"
+
+  ],
+  "key": {
+    "B": {
+      "item": "radioflyermod:turbine"
+    },
+    "E": {
+      "item": "radioflyermod:small_2_stroke_engine"
+    },
+    "T": {
+      "item": "radioflyermod:titaniumingot"
+    },
+    "I": {
+      "item": "radioflyermod:blow_torch"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:rocket_engine"
+  }
+
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    " F ",
+    "BTB",
+    "IEI"
+
+  ],
+  "key": {
+    "T": {
+      "item": "radioflyermod:fuel_tank"
+    },
+    "B": {
+      "item": "minecraft:blue_concrete"
+    },
+    "F": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "E": {
+      "item": "radioflyermod:butane_pressurized_container"
+    },
+    "I": {
+      "item": "radioflyermod:titaniumingot"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:blow_torch",
+    "count": 1
+  }
+
+}

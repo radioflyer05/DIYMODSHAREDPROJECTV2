@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+
+    "   ",
+    " MB",
+    "   "
+
+  ],
+  "key": {
+    "M": {
+      "item": "radioflyermod:mortar_and_pestle"
+    },
+    "B": {
+      "item": "radioflyermod:barley"
+    }
+  },
+  "result": {
+    "item": "radioflyermod:crushed_barley",
+    "count": 4
+  }
+
+}
