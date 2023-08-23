@@ -27,6 +27,9 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+
+
+
 public class RoboticChestEntity extends Monster implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 

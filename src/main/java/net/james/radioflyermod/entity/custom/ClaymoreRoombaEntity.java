@@ -1,4 +1,6 @@
 package net.james.radioflyermod.entity.custom;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -33,18 +35,25 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
+import net.minecraft.world.level.Explosion;
+
 
 import java.util.Collection;
 import java.util.List;
 
+import static net.minecraft.client.gui.components.ChatComponent.getHeight;
+
 public class ClaymoreRoombaEntity extends Monster implements IAnimatable {
-    private int explosionRadius = 3;
-    private static final EntityDataAccessor<Boolean> DATA_IS_POWERED = SynchedEntityData.defineId(Creeper.class, EntityDataSerializers.BOOLEAN);
+
+
     private AnimationFactory factory = new AnimationFactory(this);
 
     public ClaymoreRoombaEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
+
+
+
 
 
 
@@ -69,26 +78,30 @@ public class ClaymoreRoombaEntity extends Monster implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.robotic_chest.idle", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.claymore_roomba.walk", true));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.robotic_chest.idle", true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.claymore_roomba.idle", true));
         return PlayState.CONTINUE;
     }
 
     private PlayState attackPredicate(AnimationEvent event) {
-        if(this.swinging && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
+        if (this.swinging && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
             event.getController().markNeedsReload();
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.robotic_chest.attack", false));
-            this.swinging = false;
 
+            if (!level.isClientSide()) {
+                float explosionRadius = 2.0f; // Adjust explosion radius as needed
+                this.level.explode(this, this.getX(), this.getY(), this.getZ(), explosionRadius, Explosion.BlockInteraction.BREAK);
+            }
+
+            this.swinging = false;
         }
 
-
         return PlayState.CONTINUE;
-
     }
+
 
     @Override
     public void registerControllers(AnimationData data) {
@@ -99,21 +112,18 @@ public class ClaymoreRoombaEntity extends Monster implements IAnimatable {
     }
 
     @Override
-    public void tick() {
-        super.tick();
-
-        // Call the explosion method when the player is near
-        double playerDetectionRadius = 10.0; // Adjust this radius as needed
-        Player nearestPlayer = this.level.getNearestPlayer(this, playerDetectionRadius);
-
-        if (nearestPlayer != null) {
-            double distanceToPlayer = this.distanceTo(nearestPlayer);
-
-            if (distanceToPlayer <= playerDetectionRadius) {
-                explodeNearbyPlayers();
+    public boolean doHurtTarget(Entity entity) {
+        if (entity instanceof Player) {
+            if (!this.level.isClientSide()) {
+                float explosionRadius = 2.0f; // Adjust explosion radius as needed
+                this.level.explode(this, this.getX(), this.getY(), this.getZ(), explosionRadius, Explosion.BlockInteraction.BREAK);
+                this.remove(RemovalReason.DISCARDED);
             }
+            return true; // Entity successfully hurt the target
         }
+        return super.doHurtTarget(entity); // Perform default attack behavior for other entities
     }
+
 
     @Override
     public AnimationFactory getFactory() {
@@ -139,71 +149,15 @@ public class ClaymoreRoombaEntity extends Monster implements IAnimatable {
         return 0.2F;
     }
 
-    private void explodeCreeper() {
-        if (!this.level.isClientSide) {
-            Explosion.BlockInteraction explosion$blockinteraction = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.level, this) ? Explosion.BlockInteraction.DESTROY : Explosion.BlockInteraction.NONE;
-            float f = this.isPowered() ? 2.0F : 1.0F;
-            this.dead = true;
-            this.level.explode(this, this.getX(), this.getY(), this.getZ(), (float)this.explosionRadius * f, explosion$blockinteraction);
-            this.discard();
-            this.spawnLingeringCloud();
+    private void explode() {
+        if (!this.level.isClientSide()) {
+            float explosionRadius = 2.0f; // You can adjust the explosion radius here
+            Explosion.BlockInteraction explosionMode = Explosion.BlockInteraction.BREAK; // Choose explosion mode
+
+            this.level.explode(this, this.getX(), this.getY(), this.getZ(), explosionRadius, explosionMode);
         }
     }
 
-        private void spawnLingeringCloud() {
-            Collection<MobEffectInstance> collection = this.getActiveEffects();
-            if (!collection.isEmpty()) {
-                AreaEffectCloud areaeffectcloud = new AreaEffectCloud(this.level, this.getX(), this.getY(), this.getZ());
-                areaeffectcloud.setRadius(2.5F);
-                areaeffectcloud.setRadiusOnUse(-0.5F);
-                areaeffectcloud.setWaitTime(10);
-                areaeffectcloud.setDuration(areaeffectcloud.getDuration() / 2);
-                areaeffectcloud.setRadiusPerTick(-areaeffectcloud.getRadius() / (float)areaeffectcloud.getDuration());
-
-                for(MobEffectInstance mobeffectinstance : collection) {
-                    areaeffectcloud.addEffect(new MobEffectInstance(mobeffectinstance));
-                }
-
-                this.level.addFreshEntity(areaeffectcloud);
-            }
-
-        }
-    public boolean isPowered() {
-        return this.entityData.get(DATA_IS_POWERED);
-    }
-
-
-    private void explodeNearbyPlayers() {
-        double explosionRadius = 5.0; // Set the explosion radius as you prefer
-
-        // Find nearby players within the explosion radius
-        Level world = this.level;
-        BlockPos entityPos = this.blockPosition();
-
-        List<Player> nearbyPlayers = world.getEntitiesOfClass(Player.class,
-                new AABB(entityPos.getX() - explosionRadius, entityPos.getY() - explosionRadius, entityPos.getZ() - explosionRadius,
-                        entityPos.getX() + explosionRadius, entityPos.getY() + explosionRadius, entityPos.getZ() + explosionRadius));
-
-        nearbyPlayers.forEach(player -> {
-            // Create an explosion centered around the robotic chest entity
-            Explosion explosion = new Explosion(world, this, entityPos.getX(), entityPos.getY(), entityPos.getZ(), (float) explosionRadius, false, Explosion.BlockInteraction.BREAK);
-
-            // Trigger the explosion
-            explosion.explode();
-        });
-    }
-    private void createExplosionEffect() {
-        // Get the particle manager from the world
-        ParticleManager particleManager = this.level.getParticleManager();
-
-        // Spawn explosion particles
-        for (int i = 0; i < 100; i++) {
-            double xOffset = this.random.nextGaussian() * explosionRadius;
-            double yOffset = this.random.nextGaussian() * explosionRadius;
-            double zOffset = this.random.nextGaussian() * explosionRadius;
-            particleManager.add(ParticleTypes.EXPLOSION, this.getX() + xOffset, this.getY() + yOffset, this.getZ() + zOffset, 0.0D, 0.0D, 0.0D);
-        }
-    }
 
 
 
