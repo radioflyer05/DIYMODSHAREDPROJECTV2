@@ -83,6 +83,10 @@ public class ModBlocks {
             () -> new DecomposerBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops().dynamicShape()), ModCreativeModeTab.RADIOFLYER_TAB);
 
+    public static final RegistryObject<Block> ROBOTIC_CHEST_BLOCK = registerBlock("robotic_chest_block",
+            () -> new RoboticChestBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

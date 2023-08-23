@@ -2,10 +2,12 @@ package net.james.radioflyermod.item;
 
 import net.james.radioflyermod.RadioflyerMod;
 import net.james.radioflyermod.block.ModBlocks;
+import net.james.radioflyermod.entity.ModEntityTypes;
 import net.james.radioflyermod.fluid.ModFluids;
 import net.james.radioflyermod.item.custom.*;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -144,6 +146,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> ETHYLENE_PRESSUREIZED_CONTAINER = ITEMS.register("ethylene_pressurized_container",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.RADIOFLYER_TAB)));
+
+    public static final RegistryObject<Item> ROBOTIC_CHEST_SPAWN_EGG = ITEMS.register("robotic_chest_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.ROBOTIC_CHEST, 0x865D20, 0x211D18,
+                    new Item.Properties().tab(ModCreativeModeTab.RADIOFLYER_TAB)));
 
 
 

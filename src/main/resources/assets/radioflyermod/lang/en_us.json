@@ -41,6 +41,7 @@
   "item.radioflyermod.methane_pressurized_container" : "Pressurized Methane Canister",
   "item.radioflyermod.ethylene_pressurized_container" : "Pressurized Ethylene Canister",
   "item.radioflyermod.propylene_pressurized_container" : "Pressurized Propylene Canister",
+  "item.radioflyermod.robotic_chest_spawn_egg" : "Robotic Chest Spawn Egg",
 
 
   "block.radioflyermod.titanium_block": "Block of Titanium",
@@ -53,6 +54,7 @@
   "block.radioflyermod.barley_crop": "Barley Crop",
   "block.radioflyermod.distillery": "Distillery",
   "block.radioflyermod.decomposer": "Chemical Decomposer",
+  "block.radioflyermod.robotic_chest_block": "Robotic Chest",
 
 
   "fluid_type.radioflyermod.gas_fluid": "Gas",
@@ -60,6 +62,10 @@
   "fluid_type.radioflyermod.yeast_water_fluid": "Fermenting Solution",
   "fluid_type.radioflyermod.hexane_fluid": "Hexane",
   "fluid_type.radioflyermod.pentane_fluid": "Pentane",
+
+  "entity.radioflyermod.robotic_chest": "Robotic Chest",
+
+
 
   "itemGroup.radioflyertab": "Radioflyer Mod",
 

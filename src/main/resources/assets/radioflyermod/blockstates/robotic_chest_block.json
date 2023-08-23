@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "radioflyermod:block/robotic_chest_block"
+    },
+    "facing=north": {
+      "model": "radioflyermod:block/robotic_chest_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "radioflyermod:block/robotic_chest_block",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "radioflyermod:block/robotic_chest_block",
+      "y": 90
+    }
+  }
+}
