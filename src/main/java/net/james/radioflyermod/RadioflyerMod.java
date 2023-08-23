@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.james.radioflyermod.block.ModBlocks;
 import net.james.radioflyermod.block.entity.ModBlockEntities;
 import net.james.radioflyermod.entity.ModEntityTypes;
+import net.james.radioflyermod.entity.client.ClaymoreRoombaRenderer;
 import net.james.radioflyermod.entity.client.RoboticChestRenderer;
 import net.james.radioflyermod.fluid.*;
 import net.james.radioflyermod.item.ModItems;
@@ -96,6 +97,7 @@ public class RadioflyerMod {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_PENTANE.get(), RenderType.translucent());
 
             EntityRenderers.register(ModEntityTypes.ROBOTIC_CHEST.get(), RoboticChestRenderer::new);
+            EntityRenderers.register(ModEntityTypes.CLAYMORE_ROOMBA.get(), ClaymoreRoombaRenderer::new);
 
         }
     }

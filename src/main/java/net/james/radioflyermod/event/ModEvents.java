@@ -2,6 +2,7 @@ package net.james.radioflyermod.event;
 
 import net.james.radioflyermod.RadioflyerMod;
 import net.james.radioflyermod.entity.ModEntityTypes;
+import net.james.radioflyermod.entity.custom.ClaymoreRoombaEntity;
 import net.james.radioflyermod.entity.custom.RoboticChestEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,6 +22,8 @@ public class ModEvents {
         @SubscribeEvent
         public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
             event.put(ModEntityTypes.ROBOTIC_CHEST.get(), RoboticChestEntity.setAttributes());
+            event.put(ModEntityTypes.CLAYMORE_ROOMBA.get(), ClaymoreRoombaEntity.setAttributes());
         }
+
     }
 }

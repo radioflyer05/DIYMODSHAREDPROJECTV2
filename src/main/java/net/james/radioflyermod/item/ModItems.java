@@ -151,7 +151,9 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.ROBOTIC_CHEST, 0x865D20, 0x211D18,
                     new Item.Properties().tab(ModCreativeModeTab.RADIOFLYER_TAB)));
 
-
+    public static final RegistryObject<Item> CLAYMORE_ROOMBA_SPAWN_EGG = ITEMS.register("claymore_roomba_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.CLAYMORE_ROOMBA, 0xFFC600, 0x547C58,
+                    new Item.Properties().tab(ModCreativeModeTab.RADIOFLYER_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

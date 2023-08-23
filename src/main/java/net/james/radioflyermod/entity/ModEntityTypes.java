@@ -1,6 +1,7 @@
 package net.james.radioflyermod.entity;
 
 import net.james.radioflyermod.RadioflyerMod;
+import net.james.radioflyermod.entity.custom.ClaymoreRoombaEntity;
 import net.james.radioflyermod.entity.custom.RoboticChestEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -21,6 +22,11 @@ public class ModEntityTypes {
                             .build(new ResourceLocation(RadioflyerMod.MOD_ID, "robotic_chest").toString()));
 
 
+    public static final RegistryObject <EntityType<ClaymoreRoombaEntity>> CLAYMORE_ROOMBA =
+            ENTITY_TYPES.register("claymore_roomba",
+                    () -> EntityType.Builder.of(ClaymoreRoombaEntity::new, MobCategory.MONSTER)
+                            .sized(0.8f, 0.8f)
+                            .build(new ResourceLocation(RadioflyerMod.MOD_ID, "claymore_roomba").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

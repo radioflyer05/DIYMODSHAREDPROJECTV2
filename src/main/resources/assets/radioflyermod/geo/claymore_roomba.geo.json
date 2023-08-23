@@ -1,0 +1,60 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "Roomba",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-5, 0, 0], "size": [10, 3, 5], "uv": [0, 0]},
+						{"origin": [-5, 0, -5], "size": [10, 2, 5], "uv": [0, 8]},
+						{"origin": [-4, 0, 5], "size": [8, 3, 1], "uv": [12, 15]},
+						{"origin": [-4, 0, -6], "size": [8, 2, 1], "uv": [12, 19]},
+						{"origin": [-4, 0, -6], "size": [4, 2, 1], "pivot": [0, 0, 0], "rotation": [0, -90, 0], "uv": [0, 29]},
+						{"origin": [-2, 2, -2], "size": [2, 1, 4], "pivot": [0, 0, 0], "rotation": [0, -90, 0], "uv": [20, 22]},
+						{"origin": [-6, 2, -1], "size": [1, 1, 2], "pivot": [0, 0, 0], "rotation": [0, -90, 0], "uv": [0, 15]},
+						{"origin": [0, 0, -6], "size": [4, 3, 1], "pivot": [0, 0, 0], "rotation": [0, -90, 0], "uv": [25, 8]},
+						{"origin": [-4, 0, 5], "size": [4, 2, 1], "pivot": [0, 0, 0], "rotation": [0, -90, 0], "uv": [28, 22]},
+						{"origin": [0, 0, 5], "size": [4, 3, 1], "pivot": [0, 0, 0], "rotation": [0, -90, 0], "uv": [20, 27]}
+					]
+				},
+				{
+					"name": "Claymore",
+					"parent": "Roomba",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [3, 3, 2], "size": [1, 1, 1], "pivot": [0, 0, 0], "rotation": [0, -90, 0], "uv": [0, 2]},
+						{"origin": [3, 3, -3], "size": [1, 1, 1], "pivot": [0, 0, 0], "rotation": [0, -90, 0], "uv": [0, 0]},
+						{"origin": [3, 10, -2], "size": [1, 1, 4], "pivot": [0, 0, 0], "rotation": [0, -90, 0], "uv": [25, 0]},
+						{"origin": [2, 4, -4], "size": [2, 6, 8], "pivot": [0, 0, 0], "rotation": [0, -90, 0], "uv": [0, 15]}
+					]
+				},
+				{
+					"name": "Laser",
+					"parent": "Claymore",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-3, 6, -6], "size": [1, 1, 8], "pivot": [0, 0, 0], "rotation": [0, 25, 0], "uv": [32, 21]}
+					]
+				},
+				{
+					"name": "bone",
+					"parent": "Claymore",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [2, 6, -6], "size": [1, 1, 8], "pivot": [0, 0, 0], "rotation": [0, -25, 0], "uv": [31, 6]}
+					]
+				}
+			]
+		}
+	]
+}
