@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "radioflyermod:block/stripped_para_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "radioflyermod:block/stripped_para_log"
+    },
+    "axis=z": {
+      "model": "radioflyermod:block/stripped_para_log_horizontal",
+      "x": 90
+    }
+  }
+}

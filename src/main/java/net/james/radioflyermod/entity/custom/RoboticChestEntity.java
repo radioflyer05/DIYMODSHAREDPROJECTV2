@@ -43,7 +43,7 @@ public class RoboticChestEntity extends Monster implements IAnimatable {
         return Monster.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 20.0D)
                 .add(Attributes.ATTACK_DAMAGE, 3.0f)
-                .add(Attributes.ATTACK_SPEED, 1.0f)
+                .add(Attributes.ATTACK_SPEED, 0.8f)
                 .add(Attributes.MOVEMENT_SPEED, 0.4f).build();
     }
 

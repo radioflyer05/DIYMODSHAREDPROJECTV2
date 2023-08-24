@@ -15,7 +15,7 @@ import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 public class ClaymoreRoombaRenderer extends GeoEntityRenderer<ClaymoreRoombaEntity> {
     public ClaymoreRoombaRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new ClaymoreRoombaModel());
-        this.shadowRadius = 0.7f;
+        this.shadowRadius = 0.5f;
     }
 
     @Override

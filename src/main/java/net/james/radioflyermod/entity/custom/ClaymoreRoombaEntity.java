@@ -1,16 +1,10 @@
 package net.james.radioflyermod.entity.custom;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -20,13 +14,10 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.IronGolem;
-import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.AABB;
 import software.bernie.geckolib3.core.AnimationState;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -35,13 +26,7 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
-import net.minecraft.world.level.Explosion;
 
-
-import java.util.Collection;
-import java.util.List;
-
-import static net.minecraft.client.gui.components.ChatComponent.getHeight;
 
 public class ClaymoreRoombaEntity extends Monster implements IAnimatable {
 
@@ -59,10 +44,10 @@ public class ClaymoreRoombaEntity extends Monster implements IAnimatable {
 
     public static AttributeSupplier setAttributes() {
         return Monster.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 20.0D)
-                .add(Attributes.ATTACK_DAMAGE, 3.0f)
-                .add(Attributes.ATTACK_SPEED, 1.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.4f).build();
+                .add(Attributes.MAX_HEALTH, 10.0D)
+                .add(Attributes.ATTACK_DAMAGE, 1.0f)
+                .add(Attributes.ATTACK_SPEED, 0.4f)
+                .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
     }
 
     @Override
@@ -115,7 +100,7 @@ public class ClaymoreRoombaEntity extends Monster implements IAnimatable {
     public boolean doHurtTarget(Entity entity) {
         if (entity instanceof Player) {
             if (!this.level.isClientSide()) {
-                float explosionRadius = 2.0f; // Adjust explosion radius as needed
+                float explosionRadius = 4.0f; // Adjust explosion radius as needed
                 this.level.explode(this, this.getX(), this.getY(), this.getZ(), explosionRadius, Explosion.BlockInteraction.BREAK);
                 this.remove(RemovalReason.DISCARDED);
             }
@@ -134,29 +119,22 @@ public class ClaymoreRoombaEntity extends Monster implements IAnimatable {
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.CHEST_LOCKED;
+        return SoundEvents.TNT_PRIMED;
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.BARREL_CLOSE;
+        return SoundEvents.ARMOR_EQUIP_IRON;
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.CHEST_CLOSE;
+        return SoundEvents.CREEPER_DEATH;
     }
 
     protected float getSoundVolume() {
         return 0.2F;
     }
 
-    private void explode() {
-        if (!this.level.isClientSide()) {
-            float explosionRadius = 2.0f; // You can adjust the explosion radius here
-            Explosion.BlockInteraction explosionMode = Explosion.BlockInteraction.BREAK; // Choose explosion mode
 
-            this.level.explode(this, this.getX(), this.getY(), this.getZ(), explosionRadius, explosionMode);
-        }
-    }
 
 
 

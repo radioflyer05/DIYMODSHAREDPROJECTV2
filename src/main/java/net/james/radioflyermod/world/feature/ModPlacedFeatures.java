@@ -1,7 +1,10 @@
 package net.james.radioflyermod.world.feature;
 
 import net.james.radioflyermod.RadioflyerMod;
+import net.james.radioflyermod.block.ModBlocks;
 import net.minecraft.core.Registry;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +34,18 @@ public class ModPlacedFeatures {
     public static final RegistryObject<PlacedFeature> NETHER_TITANIUM_ORE_PLACED = PLACED_FEATURES.register("nether_titanium_ore_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.NETHER_TITANIUM_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+
+
+
+
+    public static final RegistryObject<PlacedFeature> PARA_CHECKED = PLACED_FEATURES.register("para_checked",
+            () -> new PlacedFeature(ModConfiguredFeatures.PARA.getHolder().get(),
+                    List.of(PlacementUtils.filteredByBlockSurvival(ModBlocks.PARA_SAPLING.get()))));
+
+    public static final RegistryObject<PlacedFeature> PARA_PLACED = PLACED_FEATURES.register("para_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.PARA_SPAWN.getHolder().get(), VegetationPlacements.treePlacement(
+                    //Spawn Chance (0 Tree Per Chunk, 10% Chance To Spawn 1 more Tree Per Chunk)
+                    PlacementUtils.countExtra(0, 0.1f, 1))));
 
 
 

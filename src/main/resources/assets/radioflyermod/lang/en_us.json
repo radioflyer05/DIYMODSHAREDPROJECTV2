@@ -42,6 +42,7 @@
   "item.radioflyermod.ethylene_pressurized_container" : "Pressurized Ethylene Canister",
   "item.radioflyermod.propylene_pressurized_container" : "Pressurized Propylene Canister",
   "item.radioflyermod.robotic_chest_spawn_egg" : "Robotic Chest Spawn Egg",
+  "item.radioflyermod.claymore_roomba_spawn_egg" : "Claymore Roomba Spawn Egg",
 
 
   "block.radioflyermod.titanium_block": "Block of Titanium",
@@ -56,6 +57,15 @@
   "block.radioflyermod.decomposer": "Chemical Decomposer",
   "block.radioflyermod.robotic_chest_block": "Robotic Chest",
 
+  "block.radioflyermod.para_log": "Para Log",
+  "block.radioflyermod.para_planks": "Para Planks",
+  "block.radioflyermod.para_wood": "Para Wood",
+  "block.radioflyermod.stripped_para_log": "Stripped Para Log",
+  "block.radioflyermod.stripped_para_wood": "Stripped Para Wood",
+  "block.radioflyermod.para_leaves": "Para Leaves",
+  "block.radioflyermod.para_sapling": "Para Sapling",
+
+
 
   "fluid_type.radioflyermod.gas_fluid": "Gas",
   "fluid_type.radioflyermod.oil_fluid": "Oil",
@@ -64,6 +74,7 @@
   "fluid_type.radioflyermod.pentane_fluid": "Pentane",
 
   "entity.radioflyermod.robotic_chest": "Robotic Chest",
+  "entity.radioflyermod.claymore_roomba": "Claymore Roomba",
 
 
 

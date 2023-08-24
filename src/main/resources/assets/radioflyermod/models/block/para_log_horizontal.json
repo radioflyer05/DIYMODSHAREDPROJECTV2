@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "radioflyermod:block/para_log_top",
+    "side": "radioflyermod:block/para_log"
+  }
+}

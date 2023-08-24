@@ -5,15 +5,17 @@ import net.james.radioflyermod.block.custom.*;
 import net.james.radioflyermod.fluid.ModFluids;
 import net.james.radioflyermod.item.ModCreativeModeTab;
 import net.james.radioflyermod.item.ModItems;
+import net.james.radioflyermod.world.feature.tree.ParaTreeGrower;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -86,6 +88,64 @@ public class ModBlocks {
     public static final RegistryObject<Block> ROBOTIC_CHEST_BLOCK = registerBlock("robotic_chest_block",
             () -> new RoboticChestBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> PARA_LOG = registerBlock("para_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> PARA_WOOD = registerBlock("para_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> STRIPPED_PARA_LOG = registerBlock("stripped_para_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> STRIPPED_PARA_WOOD = registerBlock("stripped_para_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> PARA_LEAVES = registerBlock("para_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+                    .requiresCorrectToolForDrops()){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+            }, ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> PARA_PLANKS = registerBlock("para_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
+                    .requiresCorrectToolForDrops()){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+            }, ModCreativeModeTab.RADIOFLYER_TAB);
+
+        public static final RegistryObject<Block> PARA_SAPLING = registerBlock("para_sapling",
+            () -> new SaplingBlock(new ParaTreeGrower(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.RADIOFLYER_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

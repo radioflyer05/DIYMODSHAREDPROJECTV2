@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "radioflyermod:para_log"
+    }
+  ],
+  "result": {
+    "item": "radioflyermod:para_planks",
+    "count": 4
+  }
+}

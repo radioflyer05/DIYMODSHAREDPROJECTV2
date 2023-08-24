@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "radioflyermod:para_log",
+    "radioflyermod:para_wood",
+    "radioflyermod:stripped_para_log",
+    "radioflyermod:stripped_para_wood"
+  ]
+}
