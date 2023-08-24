@@ -3,6 +3,9 @@
   "values": [
     "radioflyermod:led_lamp",
     "radioflyermod:distillery",
-    "radioflyermod:decomposer"
+    "radioflyermod:decomposer",
+    "radioflyermod:bismuth_block",
+    "radioflyermod:blooming_bismuth_block",
+    "radioflyermod:cracked_bismuth_block"
   ]
 }

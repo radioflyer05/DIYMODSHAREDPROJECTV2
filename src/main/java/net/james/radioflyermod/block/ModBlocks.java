@@ -124,6 +124,18 @@ public class ModBlocks {
                 }
             }, ModCreativeModeTab.RADIOFLYER_TAB);
 
+    public static final RegistryObject<Block> CRACKED_BISMUTH_BLOCK = registerBlock("cracked_bismuth_block",
+            () -> new CrackedBismuthBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
+                    .strength(6f).requiresCorrectToolForDrops().dynamicShape().noOcclusion()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> BISMUTH_BLOCK = registerBlock("bismuth_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.AMETHYST)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> BLOOMING_BISMUTH_BLOCK = registerBlock("blooming_bismuth_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.AMETHYST)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
     public static final RegistryObject<Block> PARA_PLANKS = registerBlock("para_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
                     .requiresCorrectToolForDrops()){

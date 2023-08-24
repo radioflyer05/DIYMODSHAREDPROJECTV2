@@ -96,6 +96,7 @@ public class RadioflyerMod {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_PENTANE.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_PENTANE.get(), RenderType.translucent());
 
+
             EntityRenderers.register(ModEntityTypes.ROBOTIC_CHEST.get(), RoboticChestRenderer::new);
             EntityRenderers.register(ModEntityTypes.CLAYMORE_ROOMBA.get(), ClaymoreRoombaRenderer::new);
 

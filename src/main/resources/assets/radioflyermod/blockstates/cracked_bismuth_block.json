@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "radioflyermod:block/cracked_bismuth_block"
+    },
+    "facing=north": {
+      "model": "radioflyermod:block/cracked_bismuth_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "radioflyermod:block/cracked_bismuth_block",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "radioflyermod:block/cracked_bismuth_block",
+      "y": 90
+    }
+  }
+}

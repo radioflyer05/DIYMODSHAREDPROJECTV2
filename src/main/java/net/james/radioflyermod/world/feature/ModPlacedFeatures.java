@@ -47,6 +47,12 @@ public class ModPlacedFeatures {
                     //Spawn Chance (0 Tree Per Chunk, 10% Chance To Spawn 1 more Tree Per Chunk)
                     PlacementUtils.countExtra(0, 0.1f, 1))));
 
+    public static final RegistryObject<PlacedFeature> BISMUTH_GEODE_PLACED = PLACED_FEATURES.register("bismuth_geode_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.BISMUTH_GEODE.getHolder().get(), List.of(
+                    RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(2), VerticalAnchor.absolute(30)),
+                    BiomeFilter.biome())));
+
 
 
 

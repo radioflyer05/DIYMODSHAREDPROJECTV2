@@ -56,6 +56,9 @@
   "block.radioflyermod.distillery": "Distillery",
   "block.radioflyermod.decomposer": "Chemical Decomposer",
   "block.radioflyermod.robotic_chest_block": "Robotic Chest",
+  "block.radioflyermod.bismuth_block": "Bismuth Block",
+  "block.radioflyermod.blooming_bismuth_block": "Blooming Bismuth Block",
+  "block.radioflyermod.cracked_bismuth_block": "Cracked Bismuth Block",
 
   "block.radioflyermod.para_log": "Para Log",
   "block.radioflyermod.para_planks": "Para Planks",
