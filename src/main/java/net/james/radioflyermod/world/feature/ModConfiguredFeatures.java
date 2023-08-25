@@ -89,6 +89,22 @@ public class ModConfiguredFeatures {
                             -18, 18, 0.075D, 1)));
 
 
+    public static final RegistryObject<ConfiguredFeature<?, ?>> OIL_GEODE = CONFIGURED_FEATURES.register("oil_geode",
+            () -> new ConfiguredFeature<>(Feature.GEODE,
+                    new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(ModBlocks.OIL_BLOCK.get()),
+                            BlockStateProvider.simple(ModBlocks.SHALE_BLOCK.get()),
+                            BlockStateProvider.simple(ModBlocks.SHALE_BLOCK.get()),
+                            BlockStateProvider.simple(ModBlocks.SHALE_BLOCK.get()),
+                            BlockStateProvider.simple(ModBlocks.SHALE_BLOCK.get()),
+                            List.of(ModBlocks.SHALE_BLOCK.get().defaultBlockState()),
+                            BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                            new GeodeLayerSettings(1.7D, 1.2D, 2.5D, 3.5D),
+                            new GeodeCrackSettings(0.25D, 1.5D, 1), 0.5D, 0.1D,
+                            true, UniformInt.of(3, 8),
+                            UniformInt.of(2, 6), UniformInt.of(1, 2),
+                            -18, 18, 0.075D, 1)));
+
+
 
 
         public static void register(IEventBus eventBus) {

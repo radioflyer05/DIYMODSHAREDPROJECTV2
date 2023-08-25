@@ -136,6 +136,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.AMETHYST)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
 
+    public static final RegistryObject<Block> SHALE_BLOCK = registerBlock("shale_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
     public static final RegistryObject<Block> PARA_PLANKS = registerBlock("para_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
                     .requiresCorrectToolForDrops()){

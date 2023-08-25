@@ -53,6 +53,12 @@ public class ModPlacedFeatures {
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(2), VerticalAnchor.absolute(30)),
                     BiomeFilter.biome())));
 
+    public static final RegistryObject<PlacedFeature> OIL_GEODE_PLACED = PLACED_FEATURES.register("oil_geode_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.OIL_GEODE.getHolder().get(), List.of(
+                    RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(40)),
+                    BiomeFilter.biome())));
+
 
 
 
