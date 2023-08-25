@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "radioflyermod:block/wild_barley"
+  },
+  "render_type": "cutout"
+}

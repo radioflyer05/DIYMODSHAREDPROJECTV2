@@ -9,6 +9,8 @@ import net.james.radioflyermod.world.feature.tree.ParaTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -162,6 +164,10 @@ public class ModBlocks {
         public static final RegistryObject<Block> PARA_SAPLING = registerBlock("para_sapling",
             () -> new SaplingBlock(new ParaTreeGrower(),
                     BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> WILD_BARLEY = registerBlock("wild_barley",
+            () -> new FlowerBlock(MobEffects.CONFUSION, 10,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModCreativeModeTab.RADIOFLYER_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

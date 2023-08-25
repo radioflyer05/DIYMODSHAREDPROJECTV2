@@ -59,6 +59,10 @@ public class ModPlacedFeatures {
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(40)),
                     BiomeFilter.biome())));
 
+    public static final RegistryObject<PlacedFeature> WILD_BARLEY_PLACED = PLACED_FEATURES.register("wild_barley_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.WILD_BARLEY.getHolder().get(), List.of(RarityFilter.onAverageOnceEvery(16),
+                    InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
+
 
 
 
