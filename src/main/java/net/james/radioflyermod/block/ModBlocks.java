@@ -169,6 +169,78 @@ public class ModBlocks {
             () -> new FlowerBlock(MobEffects.CONFUSION, 10,
                     BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModCreativeModeTab.RADIOFLYER_TAB);
 
+    //Plastic Blocks//
+
+    public static final RegistryObject<Block> PLASTIC_BLOCK = registerBlock("plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> CLEAR_PLASTIC_BLOCK = registerBlock("clear_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> BLACK_PLASTIC_BLOCK = registerBlock("black_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> BLUE_PLASTIC_BLOCK = registerBlock("blue_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> BROWN_PLASTIC_BLOCK = registerBlock("brown_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> CYAN_PLASTIC_BLOCK = registerBlock("cyan_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> GREEN_PLASTIC_BLOCK = registerBlock("green_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> GREY_PLASTIC_BLOCK = registerBlock("grey_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> LIGHT_BLUE_PLASTIC_BLOCK = registerBlock("light_blue_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> LIGHT_GREY_PLASTIC_BLOCK = registerBlock("light_grey_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> LIME_PLASTIC_BLOCK = registerBlock("lime_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> MAGENTA_PLASTIC_BLOCK = registerBlock("magenta_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> ORANGE_PLASTIC_BLOCK = registerBlock("orange_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> PINK_PLASTIC_BLOCK = registerBlock("pink_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> PURPLE_PLASTIC_BLOCK = registerBlock("purple_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> RED_PLASTIC_BLOCK = registerBlock("red_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+    public static final RegistryObject<Block> YELLOW_PLASTIC_BLOCK = registerBlock("yellow_plastic_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.RADIOFLYER_TAB);
+
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -41,6 +41,8 @@
   "item.radioflyermod.methane_pressurized_container" : "Pressurized Methane Canister",
   "item.radioflyermod.ethylene_pressurized_container" : "Pressurized Ethylene Canister",
   "item.radioflyermod.propylene_pressurized_container" : "Pressurized Propylene Canister",
+  "item.radioflyermod.plastic_shard" : "Plastic Shard",
+  "item.radioflyermod.clear_plastic_shard" : "Clear Plastic Shard",
   "item.radioflyermod.robotic_chest_spawn_egg" : "Robotic Chest Spawn Egg",
   "item.radioflyermod.claymore_roomba_spawn_egg" : "Claymore Roomba Spawn Egg",
 
@@ -69,6 +71,25 @@
   "block.radioflyermod.stripped_para_wood": "Stripped Para Wood",
   "block.radioflyermod.para_leaves": "Para Leaves",
   "block.radioflyermod.para_sapling": "Para Sapling",
+
+  "block.radioflyermod.plastic_block": "Plastic Block",
+  "block.radioflyermod.clear_plastic_block": "Clear Plastic Block",
+  "block.radioflyermod.black_plastic_block": "Black Plastic Block",
+  "block.radioflyermod.blue_plastic_block": "Blue Plastic Block",
+  "block.radioflyermod.brown_plastic_block": "Brown Plastic Block",
+  "block.radioflyermod.cyan_plastic_block": "Cyan Plastic Block",
+  "block.radioflyermod.green_plastic_block": "Green Plastic Block",
+  "block.radioflyermod.grey_plastic_block": "Grey Plastic Block",
+  "block.radioflyermod.light_blue_plastic_block": "Light Blue Plastic Block",
+  "block.radioflyermod.light_grey_plastic_block": "Light Grey Plastic Block",
+  "block.radioflyermod.lime_plastic_block": "Lime Plastic Block",
+  "block.radioflyermod.magenta_plastic_block": "Magenta Plastic Block",
+  "block.radioflyermod.orange_plastic_block": "Orange Plastic Block",
+  "block.radioflyermod.pink_plastic_block": "Pink Plastic Block",
+  "block.radioflyermod.purple_plastic_block": "Purple Plastic Block",
+  "block.radioflyermod.red_plastic_block": "Red Plastic Block",
+  "block.radioflyermod.yellow_plastic_block": "Yellow Plastic Block",
+
 
 
 

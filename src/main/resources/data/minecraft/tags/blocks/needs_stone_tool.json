@@ -2,7 +2,24 @@
   "replace": false,
   "values": [
 
-    "radioflyermod:shale_block"
+    "radioflyermod:shale_block",
+    "radioflyermod:plastic_block",
+    "radioflyermod:clear_plastic_block",
+    "radioflyermod:black_plastic_block",
+    "radioflyermod:brown_plastic_block",
+    "radioflyermod:blue_plastic_block",
+    "radioflyermod:cyan_plastic_block",
+    "radioflyermod:green_plastic_block",
+    "radioflyermod:grey_plastic_block",
+    "radioflyermod:light_blue_plastic_block",
+    "radioflyermod:light_grey_plastic_block",
+    "radioflyermod:lime_plastic_block",
+    "radioflyermod:magenta_plastic_block",
+    "radioflyermod:orange_plastic_block",
+    "radioflyermod:pink_plastic_block",
+    "radioflyermod:purple_plastic_block",
+    "radioflyermod:red_plastic_block",
+    "radioflyermod:yellow_plastic_block"
 
   ]
 }

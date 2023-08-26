@@ -147,6 +147,12 @@ public class ModItems {
     public static final RegistryObject<Item> ETHYLENE_PRESSUREIZED_CONTAINER = ITEMS.register("ethylene_pressurized_container",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.RADIOFLYER_TAB)));
 
+    public static final RegistryObject<Item> PLASTIC_SHARD = ITEMS.register("plastic_shard",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.RADIOFLYER_TAB)));
+
+    public static final RegistryObject<Item> CLEAR_PLASTIC_SHARD = ITEMS.register("clear_plastic_shard",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.RADIOFLYER_TAB)));
+
     public static final RegistryObject<Item> ROBOTIC_CHEST_SPAWN_EGG = ITEMS.register("robotic_chest_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.ROBOTIC_CHEST, 0x865D20, 0x211D18,
                     new Item.Properties().tab(ModCreativeModeTab.RADIOFLYER_TAB)));
